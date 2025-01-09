@@ -24,15 +24,11 @@ function ResetPassword() {
     }
   
     try {
-        const response = await fetch(`https://authenticbackend.onrender.com/reset-password/${resetToken}`, {
+        const response = await fetch(`https://extraordinary-biscotti-eb6433.netlify.app/reset-password/${resetToken}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ newPassword }),
           });
-          
-          if (!response.ok) {
-            throw new Error(`Erreur HTTP: ${response.status}`);
-          }
           
       // Vérifiez si la réponse du serveur est correcte
       const data = await response.json();
