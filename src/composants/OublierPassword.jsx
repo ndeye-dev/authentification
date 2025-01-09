@@ -24,12 +24,12 @@ function ResetPassword() {
     }
   
     try {
-        const response = await fetch(`https://authenticbackend.onrender.com/reset-password/${resetToken}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ newPassword }),
-          });
-          
+      const response = await fetch(`https://authenticbackend.onrender.com/api/auth/reset-password/${resetToken}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ newPassword }),
+      });
+  
       // Vérifiez si la réponse du serveur est correcte
       const data = await response.json();
   
