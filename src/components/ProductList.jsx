@@ -1,10 +1,14 @@
 import React from 'react';
 import ProductCard from './ProductCard';
+import Image1 from '../assets/image2.webp';
+import Image3 from '../assets/image3.jpg';
+import Image2 from '../assets/image22.webp'
+
 
 const products = [
-  { id: 1, name: 'Lave-linge Samsung', price: 499, image: '/images/lave-linge.jpg' },
-  { id: 2, name: 'Réfrigérateur LG', price: 799, image: '/images/refrigerateur.jpg' },
-  { id: 3, name: 'Four à micro-ondes Panasonic', price: 129, image: '/images/micro-ondes.jpg' },
+  { id: 1, name: 'Lave Linge Sumsung', price: 499, image: [Image1] },
+  { id: 2, name: 'Réfrigérateur LG', price: 799, image: [Image2] },
+  { id: 3, name: 'Four à micro-ondes ', price: 129, image: [Image3] },
 ];
 
 function ProductList() {

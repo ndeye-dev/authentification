@@ -10,14 +10,13 @@ function ResetPassword() {
 
   useEffect(() => {
     if (!resetToken) {
-      navigate('/LoginForm');  // Si le jeton n'est pas présent, rediriger
+      navigate('/LoginForm'); 
     }
   }, [resetToken, navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    // Vérifier si le mot de passe est suffisamment sécurisé
     if (newPassword.length < 6) {
       setError('Le mot de passe doit contenir au moins 6 caractères.');
       return;
