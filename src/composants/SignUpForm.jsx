@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { setUser, setError } from '../redux/Store';  // Import des actions Redux
+import { setUser, setError } from '../redux/Store';
 
 function SignupForm() {
   const [username, setUsername] = useState('');
@@ -12,7 +12,7 @@ function SignupForm() {
   // Récupération de l'erreur depuis Redux
   const error = useSelector((state) => state.user.error);
   
-  const dispatch = useDispatch();  // Hook pour dispatcher les actions Redux
+  const dispatch = useDispatch();  
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
